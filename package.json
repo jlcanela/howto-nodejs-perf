@@ -1,0 +1,19 @@
+{
+  "name": "howto-nodejs-perf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "flamegraph": "PGHOST=172.19.0.2 PGUSER=unicorn_user PGPASSWORD=magical_password PGDATABASE=rainbow_database 0x src/index.js",
+    "clinic": "PGHOST=172.19.0.2 PGUSER=unicorn_user PGPASSWORD=magical_password PGDATABASE=rainbow_database clinic bubbleprof -- node src/index.js",
+    "start": "PGHOST=172.19.0.2 PGUSER=unicorn_user PGPASSWORD=magical_password PGDATABASE=rainbow_database node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pg": "^8.5.1",
+    "sequelize": "^4.44.4"
+  }
+}
